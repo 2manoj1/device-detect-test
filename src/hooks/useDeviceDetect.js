@@ -48,7 +48,7 @@ const useDeviceDetect = () => {
     const isMobileDevice = (() => {
       if (isDefinitelyDesktop()) return false;
       if (device.type === 'mobile') return true;
-      if (/mobile|iphone|ipod|android|blackberry|opera mini|iemobile/i.test(userAgent)) return true;
+      if (/mobile|mobi|iphone|ipod|android|blackberry|opera mini|iemobile/i.test(userAgent)) return true;
       if (os.name === 'Android' && screenWidth < 600) return true;
       if (os.name === 'iOS' && !userAgent.includes('ipad')) return true;
       return screenWidth < 600;
